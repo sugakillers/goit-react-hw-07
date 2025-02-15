@@ -5,12 +5,12 @@ const filterSlice = createSlice({
     name: '',
   },
   reducers: {
-    changeFilter(state, action) {
+    setFilter(state, action) {
       state.name = action.payload;
     },
   },
 });
 
 export const filterReducer = filterSlice.reducer;
-export const { changeFilter } = filterSlice.actions; 
+export const { setFilter } = filterSlice.actions; 
 export const selectNameFilter = state => state.filters.name;
